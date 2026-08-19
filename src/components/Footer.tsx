@@ -22,7 +22,7 @@ export function Footer({ locale, messages }: { locale: Locale; messages: Message
           </div>
           <div>
             <p className="footer-heading">{n.products}</p>
-            <Link href={`/${locale}/products#botulinum-toxin`}>{n.toxin}</Link>
+            <Link href={`/${locale}/products#tox`}>{n.toxin}</Link>
             <Link href={`/${locale}/products#dermal-fillers`}>{n.fillers}</Link>
             <Link href={`/${locale}/products#skin-care`}>{n.skinCare}</Link>
           </div>

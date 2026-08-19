@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/content/products";
 import type { Locale } from "@/i18n/config";
@@ -23,10 +24,16 @@ export function ProductCard({ product, large = false, locale = "en" }: ProductCa
       href={`/${locale}/products/${product.slug}`}
       className={`product-card ${large ? "product-card-large" : ""}`}
     >
-      <div className="product-media">
-        <span>{imageLabel}</span>
-        <small>{imageHint}</small>
-      </div>
+      {product.image ? (
+        <div className="product-media product-media-image">
+          <Image src={product.image} alt={product.name} fill sizes="100vw" quality={100} style={{ objectFit: "contain" }} />
+        </div>
+      ) : (
+        <div className="product-media">
+          <span>{imageLabel}</span>
+          <small>{imageHint}</small>
+        </div>
+      )}
       <div className="product-card-body">
         <p className="product-category">{product.category}</p>
         <h3>{product.name}</h3>

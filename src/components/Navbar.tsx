@@ -20,7 +20,7 @@ export function Navbar({ locale, messages }: { locale: Locale; messages: Message
       href: `/${locale}/products`,
       children: [
         { label: n.allProducts, href: `/${locale}/products` },
-        { label: n.toxin, href: `/${locale}/products#botulinum-toxin` },
+        { label: n.toxin, href: `/${locale}/products#tox` },
         { label: n.fillers, href: `/${locale}/products#dermal-fillers` },
         { label: n.skinCare, href: `/${locale}/products#skin-care` },
       ],

@@ -1,5 +1,5 @@
 export type ProductCategory =
-  | "Botulinum Toxin"
+  | "TOX"
   | "Dermal Fillers"
   | "Skin Care";
 
@@ -10,6 +10,7 @@ export type Product = {
   description: string;
   descriptionZh: string;
   descriptionKo: string;
+  image?: string;
   featured?: boolean;
 };
 
@@ -17,7 +18,8 @@ export const products: Product[] = [
   {
     slug: "botatox-100u",
     name: "BOTATOX 100U",
-    category: "Botulinum Toxin",
+    category: "TOX",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/botatox100u3.png",
     description:
       "Premium botulinum toxin type A for aesthetic use. A high-purity formulation developed for natural-looking results.",
     descriptionZh:
@@ -28,7 +30,8 @@ export const products: Product[] = [
   {
     slug: "jtox-100u",
     name: "JTOX 100U",
-    category: "Botulinum Toxin",
+    category: "TOX",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/jtox3.PNG",
     description:
       "Botulinum toxin type A for facial wrinkle improvement, with reliable quality and consistent results.",
     descriptionZh: "用于改善面部皱纹的 A 型肉毒毒素，品质稳定，效果一致。",
@@ -37,7 +40,8 @@ export const products: Product[] = [
   {
     slug: "rollietox-100u",
     name: "Rollietox 100U",
-    category: "Botulinum Toxin",
+    category: "TOX",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/Rollie.JPG",
     description:
       "Botulinum toxin type A for aesthetic treatments and professional use.",
     descriptionZh: "适用于专业医美治疗的 A 型肉毒毒素产品。",
@@ -46,7 +50,8 @@ export const products: Product[] = [
   {
     slug: "ktox-100u",
     name: "KTOX 100U",
-    category: "Botulinum Toxin",
+    category: "TOX",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/ktox2.PNG",
     description:
       "Korean botulinum toxin type A formulated for a range of aesthetic indications.",
     descriptionZh: "韩国 A 型肉毒毒素配方，适用于多种医美需求。",
@@ -55,11 +60,21 @@ export const products: Product[] = [
   {
     slug: "botaone-200u",
     name: "BOTAONE 200U",
-    category: "Botulinum Toxin",
+    category: "TOX",
     description:
       "Botulinum toxin type A 200U, a higher-dose formulation for larger treatment areas.",
     descriptionZh: "200U A 型肉毒毒素，较高剂量规格适合更大治疗区域。",
     descriptionKo: "넓은 시술 부위를 위한 200U 고용량 A형 보툴리눔 톡신입니다.",
+  },
+  {
+    slug: "botanad-nad-plus",
+    name: "BOTANAD NAD+",
+    category: "TOX",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/botanad%20nad%2B.PNG",
+    description:
+      "Premium-grade BOTANAD formulation from the Hyundai Bio TOX portfolio, developed for professional aesthetic use.",
+    descriptionZh: "现代生物 TOX 产品线的高品质 BOTANAD 制剂，适用于专业医美场景。",
+    descriptionKo: "전문 메디컬 에스테틱을 위한 현대바이오 TOX 라인업의 프리미엄 BOTANAD 제품입니다.",
   },
   {
     slug: "royal-fill",
@@ -118,7 +133,7 @@ export const products: Product[] = [
 ];
 
 export const productCategories: ProductCategory[] = [
-  "Botulinum Toxin",
+  "TOX",
   "Dermal Fillers",
   "Skin Care",
 ];

@@ -5,7 +5,7 @@ import { isLocale, type Locale } from "@/i18n/config";
 import { getMessages, type Messages } from "@/i18n/messages";
 
 function categoryName(category: ProductCategory, messages: Messages) {
-  if (category === "Botulinum Toxin") return messages.navigation.toxin;
+  if (category === "TOX") return messages.navigation.toxin;
   if (category === "Dermal Fillers") return messages.navigation.fillers;
   return messages.navigation.skinCare;
 }

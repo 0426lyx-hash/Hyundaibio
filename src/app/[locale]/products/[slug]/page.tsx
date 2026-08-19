@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MediaPlaceholder } from "@/components/media-placeholder";
@@ -32,7 +33,13 @@ export default async function ProductPage({ params }: Props) {
   return (
     <>
       <section className="product-detail page-container">
-        <MediaPlaceholder label={`${product.name} ${messages.common.media}`} ratio="1:1 transparent PNG" />
+        {product.image ? (
+          <div className="product-detail-media">
+            <Image src={product.image} alt={product.name} fill sizes="100vw" quality={100} style={{ objectFit: "contain" }} priority />
+          </div>
+        ) : (
+          <MediaPlaceholder label={`${product.name} ${messages.common.media}`} ratio="1:1 transparent PNG" />
+        )}
         <div className="product-detail-copy">
           <p className="section-kicker">{product.category}</p><h1>{product.name}</h1>
           <p>{descriptionFor(locale, product)}</p>
