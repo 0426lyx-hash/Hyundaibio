@@ -243,14 +243,26 @@ h1, h2, h3 { font-weight: 700; }
 .page-hero-banner h1 { max-width: none; font-size: clamp(32px, 6vw, 48px); font-weight: 700; }
 .page-hero-banner .section-kicker { margin: 0 0 20px; }
 .page-hero-banner p:last-child { margin: 22px auto 0; }
-.category-nav { position: sticky; top: 0; z-index: 20; display: flex; justify-content: center; gap: 50px; padding-block: 25px; border-bottom: 1px solid var(--line); background: rgb(255 255 255 / .96); }
-.category-nav a { font-size: 12px; font-weight: 700; }
-.product-catalog { padding-bottom: 130px; }
-.catalog-section { scroll-margin-top: 90px; display: grid; grid-template-columns: .32fr 1fr; gap: 5vw; padding-top: 120px; }
-.catalog-heading { position: sticky; top: 95px; align-self: start; }
-.catalog-heading p { color: var(--blue); font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
-.catalog-heading h2 { margin: 16px 0; color: var(--navy); font-size: 38px; letter-spacing: -.04em; }
-.catalog-heading span { color: #999fa8; font-size: 11px; }
+/* Product page: hero, tabs, catalog */
+.product-hero { display: flex; align-items: center; justify-content: space-between; gap: 4vw; padding: 60px 5%; min-height: 450px; background: #f5f5f5; }
+.product-hero-text { flex: 1; max-width: 45%; min-width: 0; }
+.product-hero-text .section-kicker { margin-bottom: 18px; }
+.product-hero-text h1 { margin: 0 0 22px; color: var(--navy); font-size: clamp(40px, 5vw, 72px); letter-spacing: -.045em; line-height: 1.05; }
+.product-hero-text > p:last-child { margin: 0; max-width: 480px; color: var(--muted); font-size: 17px; line-height: 1.7; }
+.product-hero-image { position: relative; flex: 1; max-width: 55%; min-width: 0; align-self: stretch; }
+.product-hero-image img { object-fit: contain; }
+
+.product-tabs { display: flex; width: 100%; background: #0a1e5c; }
+.product-tab { flex: 1; padding: 16px 8px; border: 0; border-right: 1px solid rgb(255 255 255 / .12); background: #0a1e5c; color: #fff; font-size: 14px; font-weight: 700; text-align: center; cursor: pointer; transition: background .2s ease, color .2s ease; }
+.product-tab:last-child { border-right: 0; }
+.product-tab:hover { background: #12307d; }
+.product-tab.active { background: #fff; color: #0a1e5c; }
+
+.product-catalog { padding-block: 90px 130px; }
+.product-catalog-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 46px; }
+.product-catalog-heading p { margin: 0 0 12px; color: var(--blue); font-size: 10px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+.product-catalog-heading h2 { margin: 0; color: var(--navy); font-size: clamp(30px, 3.4vw, 48px); letter-spacing: -.04em; }
+.product-catalog-heading span { padding-bottom: 6px; color: #999fa8; font-size: 12px; }
 .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
 .product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: center; padding-block: 110px; }
 .product-detail > .media-placeholder { aspect-ratio: 1; }
@@ -344,10 +356,14 @@ h1, h2, h3 { font-weight: 700; }
   .page-hero { padding-block: 85px; }
   .page-hero-banner { height: clamp(300px, 68vw, 400px); padding-block: 0; }
   .page-hero-banner h1 { font-size: clamp(30px, 9vw, 44px); }
-  .category-nav { justify-content: flex-start; gap: 24px; overflow-x: auto; }
-  .category-nav a { white-space: nowrap; }
-  .catalog-section { grid-template-columns: 1fr; padding-top: 80px; }
-  .catalog-heading { position: static; }
+  .product-hero { flex-direction: column; justify-content: center; gap: 28px; padding: 48px 5% 44px; min-height: 0; }
+  .product-hero-text { max-width: 100%; }
+  .product-hero-text > p:last-child { max-width: none; }
+  .product-hero-image { width: 100%; max-width: 100%; min-height: 260px; }
+  .product-tab { padding: 14px 4px; font-size: 12px; }
+  .product-catalog { padding-block: 60px 90px; }
+  .product-catalog-heading { margin-bottom: 30px; }
+  .product-catalog-heading h2 { font-size: 28px; }
   .product-detail { padding-block: 70px; }
   .contact-section { padding-block: 80px; }
   .contact-hero { padding-block: 72px; }

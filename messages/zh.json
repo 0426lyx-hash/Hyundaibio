@@ -54,7 +54,7 @@
     "networkTitle": "全球网络",
     "networkDescription": "Hyundai Bio 的办公室、合作伙伴与市场信息经确认后将在此展示。"
   },
-  "products": { "title": "我们的产品组合", "description": "Hyundai Bio 当前产品组合涵盖肉毒毒素、真皮填充剂与皮肤护理产品。", "category": "产品分类", "count": "个产品", "inquiry": "产品咨询", "back": "返回全部产品", "pending": "等待公司审核" },
+  "products": { "title": "我们的产品组合", "description": "Hyundai Bio 当前产品组合涵盖肉毒毒素、真皮填充剂与皮肤护理产品。", "category": "产品分类", "count": "个产品", "inquiry": "产品咨询", "back": "返回全部产品", "pending": "等待公司审核", "all": "全部", "heroKicker": "产品", "fillersDescription": "现代生物高品质透明质酸真皮填充剂，帮助呈现自然丰盈与面部轮廓塑形。" },
   "news": { "title": "新闻与公司动态", "description": "公司新闻、研发动态、媒体报道、展会与全球活动将在此发布。", "read": "阅读详情", "pending": "内容与发布日期待确认" },
   "contact": { "title": "联系 Hyundai Bio", "description": "经核实的公司联系方式将在此发布，表单提交和邮件发送将在后续接入。", "sections": ["公司总部", "商务合作", "研发合作", "产品咨询"] },
   "footer": { "copy": "一家通过产品品质、负责任的合作关系和持续创新建立信任的全球医美企业。", "company": "公司", "contact": "联系", "general": "一般咨询", "pending": "公司信息待确认", "privacy": "隐私政策 · 使用条款" },
