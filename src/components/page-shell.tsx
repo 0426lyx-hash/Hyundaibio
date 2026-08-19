@@ -21,13 +21,14 @@ export function PageShell({
 }: PageShellProps) {
   return (
     <>
-      {heroImage && (
-        <div className="page-hero-image">
-          <Image src={heroImage} alt={title} fill sizes="100vw" style={{ objectFit: "cover" }} priority />
-        </div>
-      )}
-      <section className="page-hero">
-        <div className="page-container">
+      <section className={heroImage ? "page-hero page-hero-banner" : "page-hero"}>
+        {heroImage && (
+          <>
+            <Image src={heroImage} alt={title} fill sizes="100vw" style={{ objectFit: "cover" }} priority />
+            <div className="page-hero-overlay" aria-hidden="true" />
+          </>
+        )}
+        <div className={heroImage ? "page-hero-content" : "page-container"}>
           <p className="section-kicker light">{eyebrow}</p>
           <h1>{title}</h1>
           {description && <p>{description}</p>}
