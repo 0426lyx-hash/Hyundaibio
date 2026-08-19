@@ -49,8 +49,16 @@
     "title": "About Hyundai Bio",
     "description": "",
     "sections": ["Company Overview", "Vision & Mission", "History", "Global Network"],
-    "ceoTitle": "CEO Message",
-    "ceoDescription": "An approved message from Hyundai Bio leadership will be published here.",
+    "ceo": {
+      "title": "CEO Message",
+      "body": [
+        "Hyundai Bio is a company that values not only the outer beauty of humanity, but also the inner beauty of health.",
+        "With this philosophy, we develop safe and superior products, aspiring to become a world-class global leader in Medical Beauty.",
+        "Backed by proven efficacy and safety through extensive clinical trials, Hyundai Bio will continue expanding into advanced and emerging markets, while driving meaningful results through increased R&D investment.",
+        "JD Bio will promote the excellence of K-Beauty while growing into a company that shapes the global market. Our entire team is committed to meeting the expectations of those who generously support us."
+      ],
+      "signature": ["CEO, Hyundai Bio", "Mario Odyssey"]
+    },
     "networkTitle": "Global Network",
     "networkDescription": "Verified information about Hyundai Bio offices, partners, and markets will appear here."
   },

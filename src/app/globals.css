@@ -278,6 +278,31 @@ h1, h2, h3 { font-weight: 700; }
 .product-catalog-heading h2 { margin: 0; color: var(--navy); font-size: clamp(30px, 3.4vw, 48px); letter-spacing: -.04em; }
 .product-catalog-heading span { padding-bottom: 6px; color: #999fa8; font-size: 12px; }
 .catalog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+
+/* CEO message page */
+.ceo-section {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  padding: 80px 5%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.ceo-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 20, 60, 0.7);
+  z-index: 1;
+}
+.ceo-content { position: relative; z-index: 2; max-width: 750px; }
+.ceo-content .section-kicker { margin-bottom: 22px; }
+.ceo-content h1 { margin: 0 0 34px; font-size: clamp(42px, 5vw, 48px); font-weight: 700; letter-spacing: -.045em; line-height: 1.1; }
+.ceo-content > p:not(.section-kicker) { margin: 0 0 20px; max-width: 700px; font-size: 17px; line-height: 1.8; }
+.ceo-signature { display: flex; flex-direction: column; align-items: flex-end; margin-top: 44px; gap: 4px; }
+.ceo-signature span { font-size: 16px; font-weight: 700; }
 .product-detail { display: grid; grid-template-columns: 1fr 1fr; gap: 8vw; align-items: center; padding-block: 110px; }
 .product-detail > .media-placeholder { aspect-ratio: 1; }
 .product-detail > .product-detail-media { position: relative; aspect-ratio: 1; overflow: hidden; border: 1px solid #eee; background: #fff; }
@@ -377,6 +402,9 @@ h1, h2, h3 { font-weight: 700; }
   .product-catalog { padding-block: 60px 90px; }
   .product-catalog-heading { margin-bottom: 30px; }
   .product-catalog-heading h2 { font-size: 28px; }
+  .ceo-section { padding: 60px 6%; }
+  .ceo-content h1 { font-size: 34px; }
+  .ceo-content > p:not(.section-kicker) { font-size: 15px; }
   .product-detail { padding-block: 70px; }
   .contact-section { padding-block: 80px; }
   .contact-hero { padding-block: 72px; }
