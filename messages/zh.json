@@ -47,7 +47,7 @@
   "metrics": ["产品数量", "全球市场", "经销合作伙伴", "行业经验"],
   "about": {
     "title": "关于 Hyundai Bio",
-    "description": "经内部审核后的公司定位、愿景、历史、组织结构与全球网络信息将在此展示。",
+    "description": "",
     "sections": ["公司概况", "愿景与使命", "发展历程", "全球网络"],
     "ceoTitle": "CEO 寄语",
     "ceoDescription": "经公司批准的管理层寄语将在此发布。",

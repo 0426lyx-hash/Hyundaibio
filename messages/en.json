@@ -47,7 +47,7 @@
   "metrics": ["Products", "Global Markets", "Distribution Partners", "Years of Experience"],
   "about": {
     "title": "About Hyundai Bio",
-    "description": "Company positioning, vision, history, organization, and global network will be migrated here after internal review.",
+    "description": "",
     "sections": ["Company Overview", "Vision & Mission", "History", "Global Network"],
     "ceoTitle": "CEO Message",
     "ceoDescription": "An approved message from Hyundai Bio leadership will be published here.",

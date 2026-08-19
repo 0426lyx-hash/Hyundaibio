@@ -7,5 +7,5 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const messages = await getMessages(locale);
-  return <PageShell eyebrow={messages.navigation.about} title={messages.about.title} description={messages.about.description} sections={messages.about.sections} locale={locale} />;
+  return <PageShell eyebrow={messages.navigation.about} title={messages.about.title} description={messages.about.description} sections={messages.about.sections} locale={locale} heroImage="https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/company.png" />;
 }

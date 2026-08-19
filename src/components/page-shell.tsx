@@ -1,4 +1,5 @@
 import { MediaPlaceholder } from "@/components/media-placeholder";
+import Image from "next/image";
 import type { Locale } from "@/i18n/config";
 
 type PageShellProps = {
@@ -7,6 +8,7 @@ type PageShellProps = {
   description: string;
   sections: string[];
   locale?: Locale;
+  heroImage?: string;
 };
 
 export function PageShell({
@@ -15,14 +17,20 @@ export function PageShell({
   description,
   sections,
   locale = "en",
+  heroImage,
 }: PageShellProps) {
   return (
     <>
+      {heroImage && (
+        <div className="page-hero-image">
+          <Image src={heroImage} alt={title} fill sizes="100vw" style={{ objectFit: "cover" }} priority />
+        </div>
+      )}
       <section className="page-hero">
         <div className="page-container">
           <p className="section-kicker light">{eyebrow}</p>
           <h1>{title}</h1>
-          <p>{description}</p>
+          {description && <p>{description}</p>}
         </div>
       </section>
       <section className="page-container product-detail">
