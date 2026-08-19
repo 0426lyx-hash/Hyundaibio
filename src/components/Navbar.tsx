@@ -22,7 +22,7 @@ export function Navbar({ locale, messages }: { locale: Locale; messages: Message
         { label: n.allProducts, href: `/${locale}/products` },
         { label: n.toxin, href: `/${locale}/products#tox` },
         { label: n.fillers, href: `/${locale}/products#dermal-fillers` },
-        { label: n.skinCare, href: `/${locale}/products#skin-care` },
+        { label: n.cosmetics, href: `/${locale}/products#cosmetics` },
       ],
     },
     {

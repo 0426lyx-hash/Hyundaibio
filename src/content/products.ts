@@ -1,7 +1,7 @@
 export type ProductCategory =
   | "TOX"
   | "Dermal Fillers"
-  | "Skin Care";
+  | "Cosmetics";
 
 export type Product = {
   slug: string;
@@ -113,29 +113,29 @@ export const products: Product[] = [
     descriptionKo: "자연스러운 볼륨과 윤곽을 위한 입술 전용 필러입니다.",
   },
   {
-    slug: "mythexosome",
-    name: "MYTHEXOSOME",
-    category: "Skin Care",
+    slug: "royal-premium-family",
+    name: "ROYAL PREMIUM FAMILY",
+    category: "Cosmetics",
     description:
-      "An exosome-based skin rejuvenation treatment developed to support skin texture and elasticity.",
-    descriptionZh: "基于外泌体的肌肤焕活产品，旨在改善肌肤质感与弹性。",
-    descriptionKo: "피부 결 및 탄력 개선을 위한 엑소좀 기반 스킨 리주버네이션 제품입니다.",
+      "Premium cosmetic product from the Royal Premium family, formulated for everyday skin care.",
+    descriptionZh: "Royal Premium 系列的高品质化妆品，专为日常护肤打造。",
+    descriptionKo: "데일리 스킨케어를 위한 Royal Premium 라인의 프리미엄 화장품입니다.",
   },
   {
-    slug: "pcl-power-booster",
-    name: "PCL POWER BOOSTER",
-    category: "Skin Care",
+    slug: "ultimate-pdrn-ampoule",
+    name: "Ultimate PDRN Ampoule",
+    category: "Cosmetics",
     description:
-      "A PCL-based collagen stimulator developed for long-lasting skin firming effects.",
-    descriptionZh: "基于 PCL 的胶原刺激产品，旨在提供持久的肌肤紧致效果。",
-    descriptionKo: "지속적인 피부 탄력 개선을 위한 PCL 기반 콜라겐 스티뮬레이터입니다.",
+      "A PDRN-based ampoule for intensive skin recovery and hydration.",
+    descriptionZh: "基于 PDRN 的安瓶精华，帮助肌肤密集修护与水润保湿。",
+    descriptionKo: "집중 피부 회복과 보습을 위한 PDRN 앰플입니다.",
   },
 ];
 
 export const productCategories: ProductCategory[] = [
   "TOX",
   "Dermal Fillers",
-  "Skin Care",
+  "Cosmetics",
 ];
 
 export function categoryId(category: ProductCategory) {

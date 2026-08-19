@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Image from "next/image";
 import { ProductCard } from "@/components/product-card";
 import { products, type ProductCategory } from "@/content/products";
 import type { Locale } from "@/i18n/config";
@@ -9,28 +8,28 @@ import type { Messages } from "@/i18n/messages";
 
 type TabKey = "all" | ProductCategory;
 
-const TABS: TabKey[] = ["all", "TOX", "Dermal Fillers", "Skin Care"];
+const TABS: TabKey[] = ["all", "TOX", "Dermal Fillers", "Cosmetics"];
 
-// 各 Tab 对应的 hero 图片。TOX / Skin Care 暂用总图占位，待后续提供专属图片 URL。
+// 各 Tab 对应的 hero 图片。TOX / Cosmetics 暂用总图占位，待后续提供专属图片 URL。
 const HERO_IMAGE: Record<TabKey, string> = {
   all: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/full.png",
   TOX: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/full.png",
   "Dermal Fillers": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/demafill%20full.png",
-  "Skin Care": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/full.png",
+  Cosmetics: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/full.png",
 };
 
-// 支持来自导航 / 页脚的分类锚点（#tox / #dermal-fillers / #skin-care）
+// 支持来自导航 / 页脚的分类锚点（#tox / #dermal-fillers / #cosmetics）
 const HASH_TO_TAB: Record<string, TabKey> = {
   tox: "TOX",
   "dermal-fillers": "Dermal Fillers",
-  "skin-care": "Skin Care",
+  cosmetics: "Cosmetics",
 };
 
 function tabLabel(tab: TabKey, messages: Messages) {
   if (tab === "all") return messages.products.all;
   if (tab === "TOX") return messages.navigation.toxin;
   if (tab === "Dermal Fillers") return messages.navigation.fillers;
-  return messages.navigation.skinCare;
+  return messages.navigation.cosmetics;
 }
 
 export function ProductCatalog({ locale, messages }: { locale: Locale; messages: Messages }) {
@@ -70,22 +69,11 @@ export function ProductCatalog({ locale, messages }: { locale: Locale; messages:
 
   return (
     <>
-      <section className="product-hero">
+      <section className="product-hero" style={{ backgroundImage: `url(${hero.image})` }}>
         <div className="product-hero-text">
           <p className="section-kicker">{hero.kicker}</p>
           <h1>{hero.title}</h1>
           <p>{hero.description}</p>
-        </div>
-        <div className="product-hero-image">
-          <Image
-            src={hero.image}
-            alt={hero.title}
-            fill
-            sizes="(max-width: 760px) 100vw, 55vw"
-            quality={100}
-            style={{ objectFit: "contain" }}
-            priority
-          />
         </div>
       </section>
 

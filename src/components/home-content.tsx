@@ -42,7 +42,7 @@ export function HomeContent({ locale, messages }: { locale: Locale; messages: Me
               <h3>{h.brandTitle}</h3><p className="brand-story-copy">{h.brandCopy}</p>
             </div>
           </div>
-          <BrandLogos labels={[n.toxin, n.fillers, n.skinCare]} />
+          <BrandLogos labels={[n.toxin, n.fillers, n.cosmetics]} />
         </div>
       </section>
 
