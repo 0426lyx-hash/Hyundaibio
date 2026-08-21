@@ -4,6 +4,13 @@
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-07-20",
   "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "TELEGRAM_BOT_TOKEN": "",
+    "TELEGRAM_CHAT_ID": "",
+    "RESEND_API_KEY": "",
+    "RESEND_FROM": "",
+    "RESEND_TO": ""
+  },
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"

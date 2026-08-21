@@ -351,6 +351,10 @@ h1, h2, h3 { font-weight: 700; }
 .inquiry-submit small { color: var(--muted); font-size: 11px; }
 .inquiry-submit button { min-width: 210px; height: 56px; border: 0; background: var(--navy); color: white; cursor: pointer; font-size: 13px; font-weight: 700; }
 .inquiry-submit button:hover { background: var(--blue); }
+.inquiry-submit button:disabled { background: #8a93a3; cursor: not-allowed; }
+.inquiry-submit small.inquiry-success, .inquiry-submit small.inquiry-error { font-size: 13px; font-weight: 700; }
+.inquiry-submit small.inquiry-success { color: #0a7d32; }
+.inquiry-submit small.inquiry-error { color: #c0392b; }
 
 @media (max-width: 1180px) {
   .header-main { grid-template-columns: 1fr auto; min-height: 92px; }

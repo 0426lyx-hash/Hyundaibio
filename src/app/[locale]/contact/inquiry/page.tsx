@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { InquiryForm } from "@/components/inquiry-form";
 import { isLocale, type Locale } from "@/i18n/config";
 
 const inquiryCopy: Record<Locale, {
@@ -14,7 +15,9 @@ const inquiryCopy: Record<Locale, {
   select: string;
   options: string[];
   submit: string;
-  note: string;
+  sending: string;
+  success: string;
+  error: string;
 }> = {
   en: {
     eyebrow: "BUSINESS INQUIRY",
@@ -29,7 +32,9 @@ const inquiryCopy: Record<Locale, {
     select: "Select a business type",
     options: ["Wholesale", "Product inquiry", "Distribution partnership", "Other"],
     submit: "Send inquiry",
-    note: "Submitting opens your default email application.",
+    sending: "Sending…",
+    success: "✅ Your inquiry has been sent. We will get back to you soon!",
+    error: "Failed to send. Please try again or email us directly.",
   },
   zh: {
     eyebrow: "商务咨询",
@@ -44,7 +49,9 @@ const inquiryCopy: Record<Locale, {
     select: "请选择业务类型",
     options: ["批发合作", "产品咨询", "经销合作", "其他"],
     submit: "发送咨询",
-    note: "提交后将打开您的默认邮件应用。",
+    sending: "发送中…",
+    success: "✅ 咨询已发送，我们会尽快回复您！",
+    error: "发送失败，请稍后重试，或直接邮件联系我们。",
   },
   ko: {
     eyebrow: "비즈니스 문의",
@@ -59,7 +66,9 @@ const inquiryCopy: Record<Locale, {
     select: "비즈니스 유형을 선택하세요",
     options: ["도매", "제품 문의", "유통 파트너십", "기타"],
     submit: "문의 보내기",
-    note: "제출하면 기본 이메일 앱이 열립니다.",
+    sending: "전송 중…",
+    success: "✅ 문의가 전송되었습니다. 곧 회신해 드리겠습니다!",
+    error: "전송에 실패했습니다. 잠시 후 다시 시도하거나 이메일로 문의해 주세요.",
   },
 };
 
@@ -78,44 +87,7 @@ export default async function InquiryPage({ params }: { params: Promise<{ locale
         </div>
       </section>
       <section className="inquiry-section page-container">
-        <form
-          action="mailto:mariobio@naver.com?subject=Hyundai%20Bio%20Business%20Inquiry"
-          className="inquiry-form"
-          encType="text/plain"
-          method="post"
-        >
-          <label className="inquiry-field">
-            <span>{copy.company} *</span>
-            <input autoComplete="organization" name="company" required />
-          </label>
-          <label className="inquiry-field">
-            <span>{copy.country} *</span>
-            <input autoComplete="country-name" name="country" required />
-          </label>
-          <label className="inquiry-field">
-            <span>{copy.phone} *</span>
-            <input autoComplete="tel" name="phone" required type="tel" />
-          </label>
-          <label className="inquiry-field">
-            <span>{copy.type} *</span>
-            <select defaultValue="" name="businessType" required>
-              <option disabled value="">{copy.select}</option>
-              {copy.options.map((option) => <option key={option} value={option}>{option}</option>)}
-            </select>
-          </label>
-          <label className="inquiry-field inquiry-field-wide">
-            <span>{copy.email} *</span>
-            <input autoComplete="email" name="email" required type="email" />
-          </label>
-          <label className="inquiry-field inquiry-field-wide">
-            <span>{copy.message} *</span>
-            <textarea name="message" required rows={8} />
-          </label>
-          <div className="inquiry-submit inquiry-field-wide">
-            <small>{copy.note}</small>
-            <button type="submit">{copy.submit}</button>
-          </div>
-        </form>
+        <InquiryForm copy={copy} />
       </section>
     </>
   );
