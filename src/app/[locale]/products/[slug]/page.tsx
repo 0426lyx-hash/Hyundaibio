@@ -54,6 +54,30 @@ export default async function ProductPage({ params }: Props) {
           <Link href={`/${locale}/products`} className="back-link">← {messages.products.back}</Link>
         </div>
       </section>
+      {product.details && (
+        <section className="product-details page-container">
+          <h2>{messages.products.details}</h2>
+          <div className="product-details-grid">
+            {product.details.map((section) => (
+              <div className="product-details-group" key={section.title}>
+                <h3>{section.title}</h3>
+                <ul>
+                  {section.items.map((item, index) => {
+                    const colon = item.indexOf(":");
+                    const label = colon > -1 ? item.slice(0, colon) : "";
+                    const body = colon > -1 ? item.slice(colon + 1).trim() : item;
+                    return (
+                      <li key={index}>
+                        {label && <strong>{label}:</strong>} {body}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
     </>
   );
 }
