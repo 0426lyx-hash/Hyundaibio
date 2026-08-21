@@ -36,14 +36,14 @@ export function PageShell({
       </section>
       <section className="page-container product-detail">
         <MediaPlaceholder
-          label={`${title} ${locale === "zh" ? "图片 / 视频" : locale === "ko" ? "이미지 / 영상" : "IMAGE / VIDEO"}`}
+          label={`${title} ${locale === "zh" ? "图片 / 视频" : locale === "ko" ? "이미지 / 영상" : locale === "ru" ? "ИЗОБРАЖЕНИЕ / ВИДЕО" : "IMAGE / VIDEO"}`}
           ratio="4:3"
         />
         <div className="information-list">
           {sections.map((section, index) => (
             <div key={section}>
               <span>{String(index + 1).padStart(2, "0")} · {section}</span>
-              <small>{locale === "zh" ? "内容待补充" : locale === "ko" ? "내용 준비 중" : "Content pending"}</small>
+              <small>{locale === "zh" ? "内容待补充" : locale === "ko" ? "내용 준비 중" : locale === "ru" ? "Контент ожидается" : "Content pending"}</small>
             </div>
           ))}
         </div>

@@ -25,6 +25,12 @@ const contactCopy: Record<Locale, { description: string; heading: string; addres
     address: "회사 주소",
     inquiry: "비즈니스 문의",
   },
+  ru: {
+    description: "Свяжитесь с Hyundai Bio по вопросам продукции, оптового партнёрства и глобального распространения.",
+    heading: "Построим доверительное партнёрство.",
+    address: "Адрес компании",
+    inquiry: "Бизнес-запрос",
+  },
 };
 
 const contactItems = [

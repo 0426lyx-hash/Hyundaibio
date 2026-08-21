@@ -15,6 +15,7 @@ export type Product = {
   description: string;
   descriptionZh: string;
   descriptionKo: string;
+  descriptionRu: string;
   image?: string;
   imageScale?: number;
   details?: ProductDetailSection[];
@@ -54,6 +55,8 @@ export const products: Product[] = [
       "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、热稳定性强、起效快速。",
     descriptionKo:
       "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 열 안정성, 빠른 작용.",
+    descriptionRu:
+      "Уменьшение мимических морщин, контуринг линии челюсти, осветление и лифтинг кожи. Высокая эффективность, длительный эффект, термостабильность, быстрое действие.",
     details: [
       { title: "Key Benefits", items: toxWrinkleBenefits },
       { title: "Core Features", items: toxCoreFeaturesThermal },
@@ -71,6 +74,8 @@ export const products: Product[] = [
       "去除皱纹（额头、眉间、鱼尾纹）、下颌轮廓、腿部肌肉塑形、肌肤提亮。高纯度、效果持久、热稳定性强、起效快速。",
     descriptionKo:
       "주름 제거(이마, 미간, 눈가), 턱선 정리, 종아리 라인, 피부 미백. 고순도, 오래 지속, 열 안정성, 빠른 작용.",
+    descriptionRu:
+      "Удаление морщин (лоб, межбровье, гусиные лапки), контуринг линии челюсти, моделирование мышц ног, осветление кожи. Высокая чистота, длительный эффект, термостабильность, быстрое действие.",
     details: [
       {
         title: "Key Benefits",
@@ -95,6 +100,8 @@ export const products: Product[] = [
       "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、起效快速。",
     descriptionKo:
       "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 빠른 작용.",
+    descriptionRu:
+      "Уменьшение мимических морщин, контуринг линии челюсти, осветление и лифтинг кожи. Высокая эффективность, длительный эффект, быстрое действие.",
     details: [
       { title: "Key Benefits", items: toxWrinkleBenefits },
       { title: "Core Features", items: toxCoreFeatures },
@@ -111,6 +118,8 @@ export const products: Product[] = [
       "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、起效快速。",
     descriptionKo:
       "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 빠른 작용.",
+    descriptionRu:
+      "Уменьшение мимических морщин, контуринг линии челюсти, осветление и лифтинг кожи. Высокая эффективность, длительный эффект, быстрое действие.",
     details: [
       { title: "Key Benefits", items: toxWrinkleBenefits },
       { title: "Core Features", items: toxCoreFeatures },
@@ -127,6 +136,8 @@ export const products: Product[] = [
       "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、起效快速。",
     descriptionKo:
       "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 빠른 작용.",
+    descriptionRu:
+      "Уменьшение мимических морщин, контуринг линии челюсти, осветление и лифтинг кожи. Высокая эффективность, длительный эффект, быстрое действие.",
     details: [
       { title: "Key Benefits", items: toxWrinkleBenefits },
       { title: "Core Features", items: toxCoreFeatures },
@@ -143,6 +154,8 @@ export const products: Product[] = [
       "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、热稳定性强、起效快速。",
     descriptionKo:
       "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 열 안정성, 빠른 작용.",
+    descriptionRu:
+      "Уменьшение мимических морщин, контуринг линии челюсти, осветление и лифтинг кожи. Высокая эффективность, длительный эффект, термостабильность, быстрое действие.",
     details: [
       { title: "Key Benefits", items: toxWrinkleBenefits },
       { title: "Core Features", items: toxCoreFeaturesThermal },
@@ -159,6 +172,8 @@ export const products: Product[] = [
       "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、起效快速。",
     descriptionKo:
       "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 빠른 작용.",
+    descriptionRu:
+      "Уменьшение мимических морщин, контуринг линии челюсти, осветление и лифтинг кожи. Высокая эффективность, длительный эффект, быстрое действие.",
     details: [
       { title: "Key Benefits", items: toxWrinkleBenefits },
       { title: "Core Features", items: toxCoreFeatures },
@@ -176,6 +191,8 @@ export const products: Product[] = [
       "交联透明质酸，自然丰盈，效果持久。1×1ml 预充式注射器。",
     descriptionKo:
       "가교 히알루론산, 자연스러운 볼륨, 오래 지속되는 결과. 1×1ml 프리필드 시린지.",
+    descriptionRu:
+      "Сшитая гиалуроновая кислота, естественный объём, длительный результат. Предварительно заполненный шприц 1 × 1 мл.",
     details: [
       { title: "Key Feature", items: ["Natural Volume, Lasting Confidence"] },
       {
@@ -200,6 +217,8 @@ export const products: Product[] = [
       "交联透明质酸 24mg/ml，含利多卡因 3mg/ml 提升舒适度，PBS 配方。1.1ml×1 预充式注射器。",
     descriptionKo:
       "가교 HA 24mg/ml, 리도카인 3mg/ml 함유, PBS 포뮬레이션. 1.1ml×1 프리필드 시린지.",
+    descriptionRu:
+      "Сшитая гиалуроновая кислота 24 мг/мл, лидокаин 3 мг/мл для комфорта, PBS-формула. Предварительно заполненный шприц 1,1 мл × 1.",
     details: [
       {
         title: "Core Features & Specifications",
@@ -223,6 +242,8 @@ export const products: Product[] = [
       "自然效果，高可塑性、抗变形，刺激胶原蛋白与弹性蛋白生成。",
     descriptionKo:
       "자연스러운 결과, 높은 가소성과 변형 저항, 콜라겐·엘라스틴 자극.",
+    descriptionRu:
+      "Естественные результаты, высокая пластичность и устойчивость к деформации, стимуляция коллагена и эластина.",
     details: [
       {
         title: "Core Features & Highlights",
@@ -245,6 +266,8 @@ export const products: Product[] = [
       "即时效果，强效补水，天然生物相容性，交联透明质酸。1×1.0ml 注射器。",
     descriptionKo:
       "즉각적인 결과, 집중 보습, 자연스러운 생체 적합성, 가교 HA. 1×1.0ml 시린지.",
+    descriptionRu:
+      "Мгновенные результаты, интенсивное увлажнение, естественная биосовместимость, сшитая гиалуроновая кислота. Шприц 1 × 1,0 мл.",
     details: [
       {
         title: "Core Features & Highlights",
@@ -270,6 +293,8 @@ export const products: Product[] = [
       "优质容积解决方案，深层皱纹改善，安全天然，无痛治疗。",
     descriptionKo:
       "프리미엄 볼륨 솔루션, 깊은 주름 개선, 안전하고 자연스러운 무통 시술.",
+    descriptionRu:
+      "Премиальное решение для объёма, работа с глубокими морщинами, безопасность и естественность, безболезненная процедура.",
     details: [
       {
         title: "Core Features & Highlights",
@@ -293,6 +318,8 @@ export const products: Product[] = [
       "终极皮肤焕活：深层补水、弹性与紧致、提亮与美白。",
     descriptionKo:
       "궁극의 스킨 부스터: 딥 보습, 탄력, 미백과 브라이트닝.",
+    descriptionRu:
+      "Ультимативный скин-бустер: глубокое увлажнение, упругость и эластичность, осветление и отбеливание.",
     details: [
       {
         title: "Core Features & Highlights",
@@ -316,6 +343,8 @@ export const products: Product[] = [
       "抑制黑色素，焕发光彩，均匀肤色，抗氧化防护。",
     descriptionKo:
       "멜라닌 억제, 광채 부여, 균일한 피부 톤, 항산화 보호.",
+    descriptionRu:
+      "Подавление меланина, сияние, выравнивание тона кожи, антиоксидантная защита.",
     details: [
       {
         title: "Core Features & Highlights",
@@ -341,6 +370,8 @@ export const products: Product[] = [
       "三文鱼 DNA（PDRN），促进细胞再生，全面修复，强化屏障与弹性。",
     descriptionKo:
       "연어 DNA(PDRN), 세포 재생, 토털 리페어, 장벽·탄력 시너지.",
+    descriptionRu:
+      "ДНК лосося (PDRN), обновление клеток, полное восстановление, синергия барьера и упругости.",
     details: [
       {
         title: "Core Features & Highlights",

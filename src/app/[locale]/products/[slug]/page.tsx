@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MediaPlaceholder } from "@/components/media-placeholder";
 import { getProduct, products, type ProductCategory } from "@/content/products";
-import { detailsKo, detailsZh } from "@/content/product-details";
+import { detailsKo, detailsRu, detailsZh } from "@/content/product-details";
 import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getMessages, type Messages } from "@/i18n/messages";
 
@@ -15,12 +15,13 @@ export function generateStaticParams() {
 }
 
 function descriptionFor(locale: Locale, product: NonNullable<ReturnType<typeof getProduct>>) {
-  return locale === "zh" ? product.descriptionZh : locale === "ko" ? product.descriptionKo : product.description;
+  return locale === "zh" ? product.descriptionZh : locale === "ko" ? product.descriptionKo : locale === "ru" ? product.descriptionRu : product.description;
 }
 
 function detailsFor(locale: Locale, product: NonNullable<ReturnType<typeof getProduct>>) {
   if (locale === "zh") return detailsZh[product.slug] ?? product.details;
   if (locale === "ko") return detailsKo[product.slug] ?? product.details;
+  if (locale === "ru") return detailsRu[product.slug] ?? product.details;
   return product.details;
 }
 

@@ -15,10 +15,12 @@ export function ProductCard({ product, large = false, locale = "en" }: ProductCa
       ? product.descriptionZh
       : locale === "ko"
         ? product.descriptionKo
-        : product.description;
-  const imageLabel = locale === "zh" ? "产品图片" : locale === "ko" ? "제품 이미지" : "PRODUCT IMAGE";
-  const imageHint = locale === "zh" ? "1:1 透明背景 PNG" : locale === "ko" ? "1:1 투명 PNG" : "1:1 transparent PNG";
-  const viewLabel = locale === "zh" ? "查看产品" : locale === "ko" ? "제품 보기" : "View product";
+        : locale === "ru"
+          ? product.descriptionRu
+          : product.description;
+  const imageLabel = locale === "zh" ? "产品图片" : locale === "ko" ? "제품 이미지" : locale === "ru" ? "ИЗОБРАЖЕНИЕ ПРОДУКТА" : "PRODUCT IMAGE";
+  const imageHint = locale === "zh" ? "1:1 透明背景 PNG" : locale === "ko" ? "1:1 투명 PNG" : locale === "ru" ? "1:1 прозрачный PNG" : "1:1 transparent PNG";
+  const viewLabel = locale === "zh" ? "查看产品" : locale === "ko" ? "제품 보기" : locale === "ru" ? "Смотреть продукт" : "View product";
   return (
     <Link
       href={`/${locale}/products/${product.slug}`}
