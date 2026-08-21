@@ -12,6 +12,8 @@ export function Navbar({ locale, messages }: { locale: Locale; messages: Message
       children: [
         { label: n.overview, href: `/${locale}/about` },
         { label: n.ceo, href: `/${locale}/about/ceo-message` },
+        { label: messages.about.sections[1], href: `/${locale}/about/vision-mission` },
+        { label: messages.about.sections[2], href: `/${locale}/about/history` },
         { label: n.network, href: `/${locale}/about/global-network` },
       ],
     },

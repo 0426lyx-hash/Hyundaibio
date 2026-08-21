@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { AboutShell } from "@/components/about-shell";
 import { isLocale } from "@/i18n/config";
 import { getMessages } from "@/i18n/messages";
 
@@ -11,26 +12,21 @@ export default async function GlobalNetworkPage({ params }: { params: Promise<{ 
   const messages = await getMessages(locale);
 
   return (
-    <>
-      <section className="page-hero">
-        <div className="page-container">
-          <p className="section-kicker light">{messages.navigation.about}</p>
-          <h1>{messages.about.networkTitle}</h1>
-          <p>{messages.about.networkDescription}</p>
-        </div>
-      </section>
-      <section className="network-section page-container">
-        <div className="network-media">
+    <AboutShell locale={locale} messages={messages} active="global-network">
+      <section className="global-network">
+        <h2>{messages.about.networkHeading}</h2>
+        <p>{messages.about.networkDescription}</p>
+        <div className="global-network-map">
           <Image
             src={NETWORK_IMAGE}
             alt={messages.about.networkTitle}
             fill
             sizes="100vw"
             quality={100}
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: "contain" }}
           />
         </div>
       </section>
-    </>
+    </AboutShell>
   );
 }
