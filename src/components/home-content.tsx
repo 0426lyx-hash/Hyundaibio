@@ -18,7 +18,7 @@ export function HomeContent({ locale, messages }: { locale: Locale; messages: Me
 
   return (
     <>
-      <HeroSection label={h.hero} />
+      <HeroSection />
       <section className="intro-section page-container">
         <div className="intro-heading">
           <p className="section-kicker">{h.introKicker}</p>
@@ -26,7 +26,14 @@ export function HomeContent({ locale, messages }: { locale: Locale; messages: Me
           <p>{h.introCopy}</p>
           <Link href={`/${locale}/about`} className="outline-link">{h.aboutLink}</Link>
         </div>
-        <StatsCounter labels={messages.metrics} pending={h.dataPending} />
+        <StatsCounter
+          metrics={[
+            { value: 15, suffix: "", label: messages.metrics[0], note: h.dataNote },
+            { value: 16, suffix: "", label: messages.metrics[1], note: h.dataNote },
+            { value: 20, suffix: "+", label: messages.metrics[2], note: h.dataNote },
+            { value: 500, suffix: "+", label: messages.metrics[3], note: h.dataNote },
+          ]}
+        />
       </section>
 
       <section className="brand-section">

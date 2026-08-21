@@ -11,6 +11,7 @@ export type Product = {
   descriptionZh: string;
   descriptionKo: string;
   image?: string;
+  imageScale?: number;
   featured?: boolean;
 };
 
@@ -33,6 +34,7 @@ export const products: Product[] = [
     slug: "botatoxin",
     name: "Botatoxin",
     category: "Toxin",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/botatoxin.JPG",
     description:
       "Wrinkle removal (forehead, frown, crow's feet), jawline definition, leg muscle sculpting, skin brightening. High purity, long-lasting, thermally stable, fast-acting.",
     descriptionZh:
@@ -56,6 +58,7 @@ export const products: Product[] = [
     slug: "y-tox",
     name: "Y tox",
     category: "Toxin",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/ytox.JPG",
     description:
       "Facial wrinkle reduction, jawline contouring, skin brightening & lifting. High potency, long-lasting, fast-acting.",
     descriptionZh:
@@ -79,6 +82,7 @@ export const products: Product[] = [
     slug: "masetox",
     name: "MASETOX",
     category: "Toxin",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/masetox2.png",
     description:
       "Facial wrinkle reduction, jawline contouring, skin brightening & lifting. High potency, long-lasting, thermally stable, fast-acting.",
     descriptionZh:
@@ -103,6 +107,7 @@ export const products: Product[] = [
     slug: "dermafill-md",
     name: "Dermafill MD (Sub Q, Premium Q, Light Q, Dermashine)",
     category: "Filler",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/others/demafill.png",
     description:
       "Cross-linked HA, natural volume, lasting results. 1×1ml pre-filled syringe.",
     descriptionZh:
@@ -114,6 +119,7 @@ export const products: Product[] = [
     slug: "royal-fill",
     name: "Royal Fill (Fine, Deep, Subq)",
     category: "Filler",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/others/Royal%20Fill.png",
     description:
       "Cross-linked HA 24mg/ml, lidocaine 3mg/ml for comfort, PBS formulation. 1.1ml×1 pre-filled syringe.",
     descriptionZh:
@@ -125,6 +131,7 @@ export const products: Product[] = [
     slug: "royal-premium-family",
     name: "Royal Premium Family",
     category: "Filler",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/others/ROYAL%20PREMIUM%20FAMILY.png",
     description:
       "Natural results, high plasticity & anti-deformation, collagen & elastin stimulation.",
     descriptionZh:
@@ -136,6 +143,7 @@ export const products: Product[] = [
     slug: "royal-premium-collagen",
     name: "Royal Premium (Collagen)",
     category: "Filler",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/others/royal%20premium%20family%20atelocollagen3%25_%E5%89%AF%E6%9C%AC.png",
     description:
       "Instant results, intense hydration, natural biocompatibility, cross-linked HA. 1×1.0ml syringe.",
     descriptionZh:
@@ -148,6 +156,7 @@ export const products: Product[] = [
     slug: "attijou",
     name: "ATTIJOU (Rejuvenation)",
     category: "Skincare",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/others/Attijou.JPG",
     description:
       "Premium volume solution, deep wrinkle support, safe & natural, painless treatment.",
     descriptionZh:
@@ -171,6 +180,7 @@ export const products: Product[] = [
     slug: "royal-premium-brightening",
     name: "Royal Premium Family (Brightening Ampoule)",
     category: "Skincare",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/others/Royal%20Premium%20Family%20(Brightening%20Ampoule).png",
     description:
       "Melanin inhibition, radiant glow, even skin tone, antioxidant protection.",
     descriptionZh:
@@ -182,6 +192,8 @@ export const products: Product[] = [
     slug: "ultimate-pdrn-ampoule",
     name: "Ultimate PDRN Ampoule",
     category: "Skincare",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/others/Ultimate%20PDRN%20Ampoule.png",
+    imageScale: 0.75,
     description:
       "Salmon DNA (PDRN), cell renewal, total repair, barrier & elasticity synergy.",
     descriptionZh:

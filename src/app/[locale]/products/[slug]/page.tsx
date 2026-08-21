@@ -41,7 +41,7 @@ export default async function ProductPage({ params }: Props) {
       <section className="product-detail page-container">
         {product.image ? (
           <div className="product-detail-media">
-            <Image src={product.image} alt={product.name} fill sizes="100vw" quality={100} style={{ objectFit: "cover" }} priority />
+            <Image src={product.image} alt={product.name} fill sizes="100vw" quality={100} style={{ objectFit: "cover", ...(product.imageScale ? { transform: `scale(${product.imageScale})` } : {}) }} priority />
           </div>
         ) : (
           <MediaPlaceholder label={`${product.name} ${messages.common.media}`} ratio="1:1 transparent PNG" />

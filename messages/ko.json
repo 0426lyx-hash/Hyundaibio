@@ -25,7 +25,7 @@
     "introTitle": "메디컬 에스테틱으로 자신감을 만듭니다.",
     "introCopy": "현대바이오는 제품 개발, 전문성, 글로벌 유통을 연결해 더욱 신뢰할 수 있는 메디컬 에스테틱 경험을 제공합니다.",
     "aboutLink": "현대바이오 소개",
-    "dataPending": "회사 데이터 확인 중",
+    "dataNote": "2026년 기준",
     "brandKicker": "자사 브랜드",
     "allProducts": "전체 제품 보기",
     "flagship": "플래그십 제품",
@@ -60,11 +60,12 @@
       "signature": ["㈜현대바이오 대표", "마리오 오디세이"]
     },
     "networkTitle": "글로벌 네트워크",
-    "networkDescription": "현대바이오의 사무소, 파트너 및 시장 정보가 확인 후 제공됩니다."
+    "networkHeading": "글로벌 네트워크를 통해 세계 시장으로",
+    "networkDescription": "현대바이오의 제품과 파트너는 전 세계에 걸쳐 있습니다. 신뢰할 수 있는 유통업체, 클리닉, 리테일러와 협력하여 바이오 미용 솔루션을 전 세계 소비자에게 제공합니다."
   },
   "products": { "title": "제품 포트폴리오", "description": "현대바이오의 톡신, 필러, 스킨케어 제품을 소개합니다.", "category": "카테고리", "count": "개 제품", "inquiry": "제품 문의", "back": "전체 제품으로", "pending": "회사 검토 중", "all": "전체", "heroKicker": "제품", "toxinDescription": "얼굴 주름 개선, 윤곽 성형 및 리프팅에 적합한 고순도·고효능 보툴리눔 톡신 제품군입니다.", "fillersDescription": "자연스러운 볼륨과 안면 윤곽을 위한 현대바이오 프리미엄 가교 HA 더말 필러입니다.", "skincareDescription": "스킨 부스터, PDRN, 미백 앰플을 포함한 피부 재생 및 리페어 제품군입니다." },
   "news": { "title": "뉴스 및 활동", "description": "회사 뉴스, 연구 소식, 미디어 보도, 전시회 및 글로벌 활동을 소개합니다.", "read": "자세히 보기", "pending": "내용 및 게시일 확인 중" },
   "contact": { "title": "현대바이오 문의", "description": "확인된 회사 연락처가 제공되며 문의 양식과 이메일 발송 기능은 추후 연결됩니다.", "sections": ["본사", "비즈니스 문의", "R&D 파트너십", "제품 문의"] },
   "footer": { "copy": "제품 품질, 책임 있는 파트너십, 지속적인 혁신으로 신뢰를 쌓는 글로벌 메디컬 에스테틱 기업입니다.", "company": "회사", "contact": "문의", "general": "일반 문의", "pending": "사업 정보 확인 중", "privacy": "개인정보처리방침 · 이용약관" },
-  "common": { "contentPending": "내용 준비 중", "media": "이미지 / 영상", "newsImage": "뉴스 이미지", "campaignImage": "기업 캠페인 이미지" }
+  "common": { "contentPending": "내용 준비 중", "contentComingSoon": "콘텐츠 공개 예정", "media": "이미지 / 영상", "newsImage": "뉴스 이미지", "campaignImage": "기업 캠페인 이미지" }
 }

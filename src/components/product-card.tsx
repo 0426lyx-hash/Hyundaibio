@@ -26,7 +26,7 @@ export function ProductCard({ product, large = false, locale = "en" }: ProductCa
     >
       {product.image ? (
         <div className="product-media product-media-image">
-          <Image src={product.image} alt={product.name} fill sizes="100vw" quality={100} style={{ objectFit: "cover" }} />
+          <Image src={product.image} alt={product.name} fill sizes="100vw" quality={100} style={{ objectFit: "cover", ...(product.imageScale ? { transform: `scale(${product.imageScale})` } : {}) }} />
         </div>
       ) : (
         <div className="product-media">
