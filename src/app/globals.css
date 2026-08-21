@@ -190,6 +190,7 @@ h1, h2, h3 { font-weight: 700; }
 .product-card-large .product-card-body > p:not(.product-category) { max-width: 36ch; margin-top: 28px; font-size: 15px; line-height: 1.8; }
 .product-card-large .text-link { padding-top: 36px; font-size: 13px; }
 .brand-story h3 { max-width: 10ch; font-weight: 700; line-height: 1.15; word-break: keep-all; }
+.brand-story h3.brand-story-title-ru { max-width: 24ch; font-size: clamp(24px, 2.3vw, 34px); letter-spacing: -.01em; line-height: 1.25; }
 
 .portfolio-section, .activity-section { padding-block: 130px; }
 .product-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }

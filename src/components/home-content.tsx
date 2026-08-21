@@ -46,7 +46,7 @@ export function HomeContent({ locale, messages }: { locale: Locale; messages: Me
             <ProductCard product={featuredProduct} large locale={locale} />
             <div className="brand-story">
               <span className="brand-story-number">01</span><p>{h.flagship}</p>
-              <h3>{h.brandTitle}</h3><p className="brand-story-copy">{h.brandCopy}</p>
+              <h3 className={locale === "ru" ? "brand-story-title-ru" : undefined}>{h.brandTitle}</h3><p className="brand-story-copy">{h.brandCopy}</p>
             </div>
           </div>
           <BrandLogos labels={[n.toxin, n.fillers, n.skincare]} />
