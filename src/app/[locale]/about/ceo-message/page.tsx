@@ -4,7 +4,7 @@ import { AboutShell } from "@/components/about-shell";
 import { isLocale } from "@/i18n/config";
 import { getMessages } from "@/i18n/messages";
 
-const BOSS_IMAGE = "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/boss.png";
+const BOSS_IMAGE = "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/boss2.png";
 
 export default async function CeoMessagePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
