@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MediaPlaceholder } from "@/components/media-placeholder";
 import { getProduct, products, type ProductCategory } from "@/content/products";
+import { detailsKo, detailsZh } from "@/content/product-details";
 import { isLocale, locales, type Locale } from "@/i18n/config";
 import { getMessages, type Messages } from "@/i18n/messages";
 
@@ -15,6 +16,12 @@ export function generateStaticParams() {
 
 function descriptionFor(locale: Locale, product: NonNullable<ReturnType<typeof getProduct>>) {
   return locale === "zh" ? product.descriptionZh : locale === "ko" ? product.descriptionKo : product.description;
+}
+
+function detailsFor(locale: Locale, product: NonNullable<ReturnType<typeof getProduct>>) {
+  if (locale === "zh") return detailsZh[product.slug] ?? product.details;
+  if (locale === "ko") return detailsKo[product.slug] ?? product.details;
+  return product.details;
 }
 
 function categoryName(category: ProductCategory, messages: Messages) {
@@ -49,16 +56,16 @@ export default async function ProductPage({ params }: Props) {
         <div className="product-detail-copy">
           <p className="section-kicker">{categoryName(product.category, messages)}</p><h1>{product.name}</h1>
           <p>{descriptionFor(locale, product)}</p>
-          <div className="product-status"><span>{messages.products.category}</span><strong>{messages.products.pending}</strong></div>
+          <div className="product-status"><span>{messages.products.category}</span><strong>{categoryName(product.category, messages)}</strong></div>
           <Link href={`/${locale}/contact`} className="solid-link">{messages.products.inquiry}</Link>
           <Link href={`/${locale}/products`} className="back-link">← {messages.products.back}</Link>
         </div>
       </section>
-      {product.details && (
+      {detailsFor(locale, product) && (
         <section className="product-details page-container">
           <h2>{messages.products.details}</h2>
           <div className="product-details-grid">
-            {product.details.map((section) => (
+            {detailsFor(locale, product)!.map((section) => (
               <div className="product-details-group" key={section.title}>
                 <h3>{section.title}</h3>
                 <ul>

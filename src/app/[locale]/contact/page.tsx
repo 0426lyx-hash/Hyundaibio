@@ -1,7 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { isLocale, type Locale } from "@/i18n/config";
 import { getMessages } from "@/i18n/messages";
+
+const ABOUT_IMAGE = "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/company.png";
 
 const contactCopy: Record<Locale, { description: string; heading: string; address: string; inquiry: string }> = {
   en: {
@@ -41,12 +44,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <>
-      <section className="page-hero contact-hero">
-        <div className="page-container">
-          <p className="section-kicker light">{messages.navigation.contact}</p>
-          <h1>{messages.contact.title}</h1>
-          <p>{copy.description}</p>
-        </div>
+      <section className="about-hero">
+        <Image src={ABOUT_IMAGE} alt={messages.contact.title} fill sizes="100vw" style={{ objectFit: "cover" }} priority />
+        <div className="about-hero-overlay" aria-hidden="true" />
+        <h1>{messages.contact.title}</h1>
+        <p>{copy.description}</p>
       </section>
       <section className="contact-section page-container">
         <div className="contact-heading">
