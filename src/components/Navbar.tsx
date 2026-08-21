@@ -20,9 +20,9 @@ export function Navbar({ locale, messages }: { locale: Locale; messages: Message
       href: `/${locale}/products`,
       children: [
         { label: n.allProducts, href: `/${locale}/products` },
-        { label: n.toxin, href: `/${locale}/products#tox` },
-        { label: n.fillers, href: `/${locale}/products#dermal-fillers` },
-        { label: n.cosmetics, href: `/${locale}/products#cosmetics` },
+        { label: n.toxin, href: `/${locale}/products#toxin` },
+        { label: n.fillers, href: `/${locale}/products#filler` },
+        { label: n.skincare, href: `/${locale}/products#skincare` },
       ],
     },
     {

@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MediaPlaceholder } from "@/components/media-placeholder";
-import { getProduct, products } from "@/content/products";
+import { getProduct, products, type ProductCategory } from "@/content/products";
 import { isLocale, locales, type Locale } from "@/i18n/config";
-import { getMessages } from "@/i18n/messages";
+import { getMessages, type Messages } from "@/i18n/messages";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
@@ -15,6 +15,12 @@ export function generateStaticParams() {
 
 function descriptionFor(locale: Locale, product: NonNullable<ReturnType<typeof getProduct>>) {
   return locale === "zh" ? product.descriptionZh : locale === "ko" ? product.descriptionKo : product.description;
+}
+
+function categoryName(category: ProductCategory, messages: Messages) {
+  if (category === "Toxin") return messages.navigation.toxin;
+  if (category === "Filler") return messages.navigation.fillers;
+  return messages.navigation.skincare;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -41,17 +47,11 @@ export default async function ProductPage({ params }: Props) {
           <MediaPlaceholder label={`${product.name} ${messages.common.media}`} ratio="1:1 transparent PNG" />
         )}
         <div className="product-detail-copy">
-          <p className="section-kicker">{product.category}</p><h1>{product.name}</h1>
+          <p className="section-kicker">{categoryName(product.category, messages)}</p><h1>{product.name}</h1>
           <p>{descriptionFor(locale, product)}</p>
           <div className="product-status"><span>{messages.products.category}</span><strong>{messages.products.pending}</strong></div>
           <Link href={`/${locale}/contact`} className="solid-link">{messages.products.inquiry}</Link>
           <Link href={`/${locale}/products`} className="back-link">← {messages.products.back}</Link>
-        </div>
-      </section>
-      <section className="product-information">
-        <div className="page-container product-information-grid">
-          <div><p className="section-kicker">{messages.navigation.products}</p><h2>{messages.common.contentPending}</h2></div>
-          <div className="information-list">{messages.about.sections.map((item) => <div key={item}><span>{item}</span><small>{messages.common.contentPending}</small></div>)}</div>
         </div>
       </section>
     </>

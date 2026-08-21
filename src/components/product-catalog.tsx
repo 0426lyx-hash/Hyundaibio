@@ -8,28 +8,28 @@ import type { Messages } from "@/i18n/messages";
 
 type TabKey = "all" | ProductCategory;
 
-const TABS: TabKey[] = ["all", "TOX", "Dermal Fillers", "Cosmetics"];
+const TABS: TabKey[] = ["all", "Toxin", "Filler", "Skincare"];
 
-// 各 Tab 对应的 hero 图片。TOX / Cosmetics 暂用总图占位，待后续提供专属图片 URL。
+// 各 Tab 对应的 hero 图片。Toxin / Skincare 暂用总图占位，待后续提供专属图片 URL。
 const HERO_IMAGE: Record<TabKey, string> = {
   all: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/full.png",
-  TOX: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/full.png",
-  "Dermal Fillers": "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/demafill%20full.png",
-  Cosmetics: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/full.png",
+  Toxin: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/full.png",
+  Filler: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/demafill%20full.png",
+  Skincare: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/full.png",
 };
 
-// 支持来自导航 / 页脚的分类锚点（#tox / #dermal-fillers / #cosmetics）
+// 支持来自导航 / 页脚的分类锚点（#toxin / #filler / #skincare）
 const HASH_TO_TAB: Record<string, TabKey> = {
-  tox: "TOX",
-  "dermal-fillers": "Dermal Fillers",
-  cosmetics: "Cosmetics",
+  toxin: "Toxin",
+  filler: "Filler",
+  skincare: "Skincare",
 };
 
 function tabLabel(tab: TabKey, messages: Messages) {
   if (tab === "all") return messages.products.all;
-  if (tab === "TOX") return messages.navigation.toxin;
-  if (tab === "Dermal Fillers") return messages.navigation.fillers;
-  return messages.navigation.cosmetics;
+  if (tab === "Toxin") return messages.navigation.toxin;
+  if (tab === "Filler") return messages.navigation.fillers;
+  return messages.navigation.skincare;
 }
 
 export function ProductCatalog({ locale, messages }: { locale: Locale; messages: Messages }) {
@@ -46,16 +46,32 @@ export function ProductCatalog({ locale, messages }: { locale: Locale; messages:
   }, []);
 
   const hero = useMemo(() => {
-    if (active === "Dermal Fillers") {
+    if (active === "Toxin") {
       return {
-        image: HERO_IMAGE["Dermal Fillers"],
+        image: HERO_IMAGE.Toxin,
+        kicker: messages.products.heroKicker,
+        title: messages.navigation.toxin,
+        description: messages.products.toxinDescription,
+      };
+    }
+    if (active === "Filler") {
+      return {
+        image: HERO_IMAGE.Filler,
         kicker: messages.products.heroKicker,
         title: messages.navigation.fillers,
         description: messages.products.fillersDescription,
       };
     }
+    if (active === "Skincare") {
+      return {
+        image: HERO_IMAGE.Skincare,
+        kicker: messages.products.heroKicker,
+        title: messages.navigation.skincare,
+        description: messages.products.skincareDescription,
+      };
+    }
     return {
-      image: HERO_IMAGE[active],
+      image: HERO_IMAGE.all,
       kicker: messages.products.heroKicker,
       title: messages.products.title,
       description: messages.products.description,

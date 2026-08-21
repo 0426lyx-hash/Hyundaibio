@@ -1,7 +1,7 @@
 export type ProductCategory =
-  | "TOX"
-  | "Dermal Fillers"
-  | "Cosmetics";
+  | "Toxin"
+  | "Filler"
+  | "Skincare";
 
 export type Product = {
   slug: string;
@@ -15,127 +15,186 @@ export type Product = {
 };
 
 export const products: Product[] = [
+  // ---- Toxin (7) ----
   {
     slug: "botatox-100u",
-    name: "BOTATOX 100U",
-    category: "TOX",
+    name: "Botatox",
+    category: "Toxin",
     image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/botatox100u3.png",
     description:
-      "Premium botulinum toxin type A for aesthetic use. A high-purity formulation developed for natural-looking results.",
+      "Facial wrinkle reduction, jawline contouring, skin brightening & lifting. High potency, long-lasting, thermally stable, fast-acting.",
     descriptionZh:
-      "用于医美领域的高品质 A 型肉毒毒素，采用高纯度配方，旨在呈现自然效果。",
-    descriptionKo: "메디컬 에스테틱을 위한 고순도 A형 보툴리눔 톡신 제품입니다.",
+      "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、热稳定性强、起效快速。",
+    descriptionKo:
+      "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 열 안정성, 빠른 작용.",
     featured: true,
   },
   {
-    slug: "jtox-100u",
-    name: "JTOX 100U",
-    category: "TOX",
-    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/jtox3.PNG",
+    slug: "botatoxin",
+    name: "Botatoxin",
+    category: "Toxin",
     description:
-      "Botulinum toxin type A for facial wrinkle improvement, with reliable quality and consistent results.",
-    descriptionZh: "用于改善面部皱纹的 A 型肉毒毒素，品质稳定，效果一致。",
-    descriptionKo: "얼굴 주름 개선을 위한 안정적인 품질의 A형 보툴리눔 톡신입니다.",
-  },
-  {
-    slug: "rollietox-100u",
-    name: "Rollietox 100U",
-    category: "TOX",
-    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/Rollie.JPG",
-    description:
-      "Botulinum toxin type A for aesthetic treatments and professional use.",
-    descriptionZh: "适用于专业医美治疗的 A 型肉毒毒素产品。",
-    descriptionKo: "전문 메디컬 에스테틱 시술을 위한 A형 보툴리눔 톡신 제품입니다.",
+      "Wrinkle removal (forehead, frown, crow's feet), jawline definition, leg muscle sculpting, skin brightening. High purity, long-lasting, thermally stable, fast-acting.",
+    descriptionZh:
+      "去除皱纹（额头、眉间、鱼尾纹）、下颌轮廓、腿部肌肉塑形、肌肤提亮。高纯度、效果持久、热稳定性强、起效快速。",
+    descriptionKo:
+      "주름 제거(이마, 미간, 눈가), 턱선 정리, 종아리 라인, 피부 미백. 고순도, 오래 지속, 열 안정성, 빠른 작용.",
   },
   {
     slug: "ktox-100u",
-    name: "KTOX 100U",
-    category: "TOX",
+    name: "K tox",
+    category: "Toxin",
     image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/ktox2.PNG",
     description:
-      "Korean botulinum toxin type A formulated for a range of aesthetic indications.",
-    descriptionZh: "韩国 A 型肉毒毒素配方，适用于多种医美需求。",
-    descriptionKo: "다양한 미용 적응증을 위한 한국산 A형 보툴리눔 톡신 제품입니다.",
+      "Facial wrinkle reduction, jawline contouring, skin brightening & lifting. High potency, long-lasting, fast-acting.",
+    descriptionZh:
+      "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、起效快速。",
+    descriptionKo:
+      "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 빠른 작용.",
   },
   {
-    slug: "botaone-200u",
-    name: "BOTAONE 200U",
-    category: "TOX",
+    slug: "y-tox",
+    name: "Y tox",
+    category: "Toxin",
     description:
-      "Botulinum toxin type A 200U, a higher-dose formulation for larger treatment areas.",
-    descriptionZh: "200U A 型肉毒毒素，较高剂量规格适合更大治疗区域。",
-    descriptionKo: "넓은 시술 부위를 위한 200U 고용량 A형 보툴리눔 톡신입니다.",
+      "Facial wrinkle reduction, jawline contouring, skin brightening & lifting. High potency, long-lasting, fast-acting.",
+    descriptionZh:
+      "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、起效快速。",
+    descriptionKo:
+      "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 빠른 작용.",
   },
   {
-    slug: "botanad-nad-plus",
-    name: "BOTANAD NAD+",
-    category: "TOX",
-    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/botanad%20nad%2B.PNG",
+    slug: "jtox-100u",
+    name: "J tox",
+    category: "Toxin",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/jtox3.PNG",
     description:
-      "Premium-grade BOTANAD formulation from the Hyundai Bio TOX portfolio, developed for professional aesthetic use.",
-    descriptionZh: "现代生物 TOX 产品线的高品质 BOTANAD 制剂，适用于专业医美场景。",
-    descriptionKo: "전문 메디컬 에스테틱을 위한 현대바이오 TOX 라인업의 프리미엄 BOTANAD 제품입니다.",
+      "Facial wrinkle reduction, jawline contouring, skin brightening & lifting. High potency, long-lasting, fast-acting.",
+    descriptionZh:
+      "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、起效快速。",
+    descriptionKo:
+      "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 빠른 작용.",
+  },
+  {
+    slug: "masetox",
+    name: "MASETOX",
+    category: "Toxin",
+    description:
+      "Facial wrinkle reduction, jawline contouring, skin brightening & lifting. High potency, long-lasting, thermally stable, fast-acting.",
+    descriptionZh:
+      "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、热稳定性强、起效快速。",
+    descriptionKo:
+      "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 열 안정성, 빠른 작용.",
+  },
+  {
+    slug: "rollietox-100u",
+    name: "Rollie Tox",
+    category: "Toxin",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/Rollie.JPG",
+    description:
+      "Facial wrinkle reduction, jawline contouring, skin brightening & lifting. High potency, long-lasting, fast-acting.",
+    descriptionZh:
+      "改善面部皱纹、下颌轮廓塑形、肌肤提亮与提升。高效能、效果持久、起效快速。",
+    descriptionKo:
+      "얼굴 주름 개선, 턱선 윤곽, 피부 미백 및 리프팅. 높은 효능, 오래 지속, 빠른 작용.",
+  },
+  // ---- Filler (4) ----
+  {
+    slug: "dermafill-md",
+    name: "Dermafill MD (Sub Q, Premium Q, Light Q, Dermashine)",
+    category: "Filler",
+    description:
+      "Cross-linked HA, natural volume, lasting results. 1×1ml pre-filled syringe.",
+    descriptionZh:
+      "交联透明质酸，自然丰盈，效果持久。1×1ml 预充式注射器。",
+    descriptionKo:
+      "가교 히알루론산, 자연스러운 볼륨, 오래 지속되는 결과. 1×1ml 프리필드 시린지.",
   },
   {
     slug: "royal-fill",
-    name: "Royal Fill",
-    category: "Dermal Fillers",
+    name: "Royal Fill (Fine, Deep, Subq)",
+    category: "Filler",
     description:
-      "Premium hyaluronic acid dermal filler using advanced cross-linking technology.",
-    descriptionZh: "采用先进交联技术的高品质透明质酸真皮填充剂。",
-    descriptionKo: "첨단 가교 기술을 적용한 프리미엄 히알루론산 더말 필러입니다.",
-  },
-  {
-    slug: "royal-premium-collagen",
-    name: "ROYAL PREMIUM FAMILY (COLLAGEN)",
-    category: "Dermal Fillers",
-    description:
-      "A collagen-enhanced dermal filler designed for comprehensive skin rejuvenation.",
-    descriptionZh: "结合胶原成分的真皮填充剂，面向综合性肌肤焕活需求。",
-    descriptionKo: "종합적인 피부 개선을 위한 콜라겐 강화 더말 필러입니다.",
-  },
-  {
-    slug: "royal-premium-234",
-    name: "ROYAL PREMIUM FAMILY 2/3/4",
-    category: "Dermal Fillers",
-    description:
-      "An advanced HA filler series with varying densities for customized treatments.",
-    descriptionZh: "具有不同交联密度的透明质酸填充剂系列，可满足定制化治疗需求。",
-    descriptionKo: "맞춤형 시술을 위한 다양한 밀도의 히알루론산 필러 시리즈입니다.",
-  },
-  {
-    slug: "cherry-lip",
-    name: "Cherry Lip",
-    category: "Dermal Fillers",
-    description:
-      "A specialized lip enhancement filler for natural-looking volume and contour definition.",
-    descriptionZh: "专为唇部塑形设计的填充剂，帮助呈现自然丰盈度与清晰轮廓。",
-    descriptionKo: "자연스러운 볼륨과 윤곽을 위한 입술 전용 필러입니다.",
+      "Cross-linked HA 24mg/ml, lidocaine 3mg/ml for comfort, PBS formulation. 1.1ml×1 pre-filled syringe.",
+    descriptionZh:
+      "交联透明质酸 24mg/ml，含利多卡因 3mg/ml 提升舒适度，PBS 配方。1.1ml×1 预充式注射器。",
+    descriptionKo:
+      "가교 HA 24mg/ml, 리도카인 3mg/ml 함유, PBS 포뮬레이션. 1.1ml×1 프리필드 시린지.",
   },
   {
     slug: "royal-premium-family",
-    name: "ROYAL PREMIUM FAMILY",
-    category: "Cosmetics",
+    name: "Royal Premium Family",
+    category: "Filler",
     description:
-      "Premium cosmetic product from the Royal Premium family, formulated for everyday skin care.",
-    descriptionZh: "Royal Premium 系列的高品质化妆品，专为日常护肤打造。",
-    descriptionKo: "데일리 스킨케어를 위한 Royal Premium 라인의 프리미엄 화장품입니다.",
+      "Natural results, high plasticity & anti-deformation, collagen & elastin stimulation.",
+    descriptionZh:
+      "自然效果，高可塑性、抗变形，刺激胶原蛋白与弹性蛋白生成。",
+    descriptionKo:
+      "자연스러운 결과, 높은 가소성과 변형 저항, 콜라겐·엘라스틴 자극.",
+  },
+  {
+    slug: "royal-premium-collagen",
+    name: "Royal Premium (Collagen)",
+    category: "Filler",
+    description:
+      "Instant results, intense hydration, natural biocompatibility, cross-linked HA. 1×1.0ml syringe.",
+    descriptionZh:
+      "即时效果，强效补水，天然生物相容性，交联透明质酸。1×1.0ml 注射器。",
+    descriptionKo:
+      "즉각적인 결과, 집중 보습, 자연스러운 생체 적합성, 가교 HA. 1×1.0ml 시린지.",
+  },
+  // ---- Skincare (4) ----
+  {
+    slug: "attijou",
+    name: "ATTIJOU (Rejuvenation)",
+    category: "Skincare",
+    description:
+      "Premium volume solution, deep wrinkle support, safe & natural, painless treatment.",
+    descriptionZh:
+      "优质容积解决方案，深层皱纹改善，安全天然，无痛治疗。",
+    descriptionKo:
+      "프리미엄 볼륨 솔루션, 깊은 주름 개선, 안전하고 자연스러운 무통 시술.",
+  },
+  {
+    slug: "botanad-nad-plus",
+    name: "Botanad",
+    category: "Skincare",
+    image: "https://pub-8c4bce25bb3f4de4a3bf5925c0af5425.r2.dev/product/tox/botanad%20nad%2B.PNG",
+    description:
+      "Ultimate skin booster: deep hydration, elasticity & firmness, brightening & whitening.",
+    descriptionZh:
+      "终极皮肤焕活：深层补水、弹性与紧致、提亮与美白。",
+    descriptionKo:
+      "궁극의 스킨 부스터: 딥 보습, 탄력, 미백과 브라이트닝.",
+  },
+  {
+    slug: "royal-premium-brightening",
+    name: "Royal Premium Family (Brightening Ampoule)",
+    category: "Skincare",
+    description:
+      "Melanin inhibition, radiant glow, even skin tone, antioxidant protection.",
+    descriptionZh:
+      "抑制黑色素，焕发光彩，均匀肤色，抗氧化防护。",
+    descriptionKo:
+      "멜라닌 억제, 광채 부여, 균일한 피부 톤, 항산화 보호.",
   },
   {
     slug: "ultimate-pdrn-ampoule",
     name: "Ultimate PDRN Ampoule",
-    category: "Cosmetics",
+    category: "Skincare",
     description:
-      "A PDRN-based ampoule for intensive skin recovery and hydration.",
-    descriptionZh: "基于 PDRN 的安瓶精华，帮助肌肤密集修护与水润保湿。",
-    descriptionKo: "집중 피부 회복과 보습을 위한 PDRN 앰플입니다.",
+      "Salmon DNA (PDRN), cell renewal, total repair, barrier & elasticity synergy.",
+    descriptionZh:
+      "三文鱼 DNA（PDRN），促进细胞再生，全面修复，强化屏障与弹性。",
+    descriptionKo:
+      "연어 DNA(PDRN), 세포 재생, 토털 리페어, 장벽·탄력 시너지.",
   },
 ];
 
 export const productCategories: ProductCategory[] = [
-  "TOX",
-  "Dermal Fillers",
-  "Cosmetics",
+  "Toxin",
+  "Filler",
+  "Skincare",
 ];
 
 export function categoryId(category: ProductCategory) {
