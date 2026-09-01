@@ -59,6 +59,15 @@
       ],
       "signature": ["CEO, Hyundai Bio", "Mario Odyssey"]
     },
+    "visionMission": {
+      "headline": "Transforming Beauty, Empowering Lives",
+      "subhead": "– Hyundai Bio",
+      "body": "Hyundai Bio leads the global medical beauty industry by harmonizing outer elegance with inner vitality. We are shaping the future of holistic beauty through continuous innovation and growth.",
+      "visionLabel": "VISION",
+      "vision": "\"Enriching Human Lives Beyond Beauty.\"",
+      "missionLabel": "MISSION",
+      "mission": "\"To build a next-generation medical beauty ecosystem that harmonizes physical elegance with inner vitality.\""
+    },
     "networkTitle": "Global Network",
     "networkHeading": "Reaching Global Markets Through Our Worldwide Network",
     "networkDescription": "Hyundai Bio's products and partners span the globe. We work with trusted distributors, clinics, and retailers to bring bio-aesthetic solutions to consumers worldwide."

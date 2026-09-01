@@ -300,6 +300,16 @@ h1, h2, h3 { font-weight: 700; }
 .about-section-inner h2 { margin: 0 0 14px; color: var(--navy); font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -.04em; }
 .about-section-inner p { margin: 0; color: #9a9fa7; font-size: 15px; }
 
+/* Vision & Mission page */
+.vision-mission { padding: 140px 5%; }
+.vision-mission .about-section-inner > h2 { font-size: clamp(36px, 4.2vw, 58px); font-weight: 400; margin-bottom: 12px; color: var(--navy); line-height: 1.2; letter-spacing: -.01em; }
+.vision-subhead { color: var(--navy) !important; font-size: clamp(44px, 5.5vw, 72px) !important; font-weight: 800 !important; margin-bottom: 80px !important; line-height: 1.1 !important; letter-spacing: -.02em !important; }
+.vision-body { color: var(--navy) !important; font-size: clamp(17px, 1.6vw, 20px) !important; line-height: 1.8 !important; max-width: 720px; margin: 0 auto 100px !important; font-weight: 400; opacity: .9; }
+.vision-mission-block { margin-bottom: 80px; }
+.vision-mission-block:last-child { margin-bottom: 0; }
+.vision-mission-block h3 { margin: 0 0 28px; color: var(--navy); font-size: clamp(13px, 1.1vw, 15px); font-weight: 800; letter-spacing: .25em; text-transform: uppercase; opacity: .85; }
+.vision-mission-block p { color: var(--navy) !important; font-size: clamp(20px, 2vw, 26px) !important; font-style: italic; line-height: 1.6 !important; font-weight: 500; max-width: 680px; margin: 0 auto !important; }
+
 .global-network { padding: 80px 5%; text-align: center; background: #fff; }
 .global-network h2 { margin: 0 0 24px; color: #0a1e5c; font-size: clamp(30px, 3.6vw, 40px); font-weight: 700; letter-spacing: -.03em; line-height: 1.2; }
 .global-network > p { max-width: 800px; margin: 0 auto 48px; color: #333; font-size: 17px; line-height: 1.8; }
