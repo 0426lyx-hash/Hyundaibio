@@ -49,6 +49,14 @@
     "title": "关于 Hyundai Bio",
     "description": "",
     "sections": ["公司概况", "愿景与使命", "发展历程", "全球网络"],
+    "vision": {
+      "title": "重塑美丽，赋能生命 – Hyundai Bio",
+      "intro": "Hyundai Bio 将外在优雅与内在活力和谐相融，引领全球医疗美容行业。我们正通过持续的创新与成长，塑造全面美学的未来。",
+      "visionLabel": "愿景",
+      "visionQuote": "超越美丽，丰盈人类生活。",
+      "missionLabel": "使命",
+      "missionQuote": "构建将外在优雅与内在活力和谐相融的新一代医疗美容生态。"
+    },
     "ceo": {
       "title": "CEO 寄语",
       "body": [

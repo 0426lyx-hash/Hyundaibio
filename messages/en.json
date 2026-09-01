@@ -49,6 +49,14 @@
     "title": "About Hyundai Bio",
     "description": "",
     "sections": ["Company Overview", "Vision & Mission", "History", "Global Network"],
+    "vision": {
+      "title": "Transforming Beauty, Empowering Lives – Hyundai Bio",
+      "intro": "Hyundai Bio leads the global medical beauty industry by harmonizing outer elegance with inner vitality. We are shaping the future of holistic beauty through continuous innovation and growth.",
+      "visionLabel": "VISION",
+      "visionQuote": "Enriching Human Lives Beyond Beauty.",
+      "missionLabel": "MISSION",
+      "missionQuote": "To build a next-generation medical beauty ecosystem that harmonizes physical elegance with inner vitality."
+    },
     "ceo": {
       "title": "CEO Message",
       "body": [
